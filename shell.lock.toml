@@ -1,0 +1,13 @@
+# Lock screen password field (replaces the [lock] section of the generated shell.toml, so every key
+# is set): brand-blue frame, cyan while typing, coral on a wrong password.
+background       = "#192031"
+background-alpha = 0.8
+text             = "#f5f6fa"
+placeholder      = "#a5abbb"
+text-error       = "#e2637a"
+border           = "#2e3eff"
+border-active    = "#4fc3e0"
+border-error     = "#e2637a"
+border-alpha     = 1.0
+selection        = "#2e3eff"
+selection-alpha  = 0.45
