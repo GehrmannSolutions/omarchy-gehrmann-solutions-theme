@@ -56,6 +56,19 @@ gs-lock-logo remove             # back to the built-in lock screen
 It shows whichever theme is active, so it also works with the light variant (and with any theme
 that has an `unlock.png`).
 
+**Animated boot screen.** `extras/plymouth/` is a Plymouth theme of its own: the logo with a
+slowly breathing glow, the password field and progress bar as in Omarchy's boot screen. Its images
+are high-resolution and scaled to the screen height, so it is sharp on high-DPI screens too
+(`install.sh` sets `DeviceScale=1` for that). It needs sudo and rebuilds the initramfs:
+
+```bash
+~/.config/omarchy/themes/gehrmann-solutions/extras/plymouth/install.sh
+~/.config/omarchy/themes/gehrmann-solutions/extras/plymouth/install.sh remove   # Omarchy's boot screen again
+```
+
+`omarchy plymouth set …` (Style › Unlock) selects Omarchy's boot screen again; a post-update hook
+tells you when that happened.
+
 **Screensaver artwork.** `extras/screensaver.txt` is the logo as circuit-style text art for
 Omarchy's screensaver:
 
