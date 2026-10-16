@@ -15,14 +15,14 @@ unit = screen_h / 1080;                    # 1 at 1080 lines
 #----------------------------------------- Logo --------------------------------
 
 # logo-glow.png and logo-shapes.png are the same square box; the logo fills ~80 % of it
-logo_size = Math.Int(screen_h * 0.40);
+logo_size = Math.Int(screen_h * 0.58);
 logo_x = Math.Int(screen_w / 2 - logo_size / 2);
-logo_y = Math.Int(screen_h * 0.44 - logo_size / 2);
+logo_y = Math.Int(screen_h * 0.42 - logo_size / 2);
 
 glow.image = Image("logo-glow.png").Scale(logo_size, logo_size);
 glow.sprite = Sprite(glow.image);
 glow.sprite.SetPosition(logo_x, logo_y, 1);
-glow.sprite.SetOpacity(0.35);
+glow.sprite.SetOpacity(0.12);
 
 shapes.image = Image("logo-shapes.png").Scale(logo_size, logo_size);
 shapes.sprite = Sprite(shapes.image);
@@ -36,7 +36,7 @@ dialog_y = logo_y + Math.Int(logo_size * 0.92) + Math.Int(36 * unit);
 
 # The glow breathes: from GLOW_LO to GLOW_HI and back every BREATH seconds (50 frames a second).
 global.breath_period = 2.4;
-global.glow_lo = 0.35;
+global.glow_lo = 0.12;
 global.glow_hi = 1.0;
 
 # Use these to adjust the progress bar timing
